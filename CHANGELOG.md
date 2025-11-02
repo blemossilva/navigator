@@ -1,5 +1,38 @@
 # Changelog - Microsite Navigator 2026-2028
 
+## v1.2.3 - Correção de Encoding UTF-8 no CSV (Novembro 2024)
+
+### 🐛 Correção de Bug
+
+#### Encoding UTF-8 no Exportar CSV
+**Problema identificado:** Caracteres especiais (ç, ã, é, õ, etc.) apareciam corrompidos no CSV exportado quando aberto no Excel
+
+**Exemplo do problema:**
+- ❌ Antes: "AquisiÃ§Ãµes estratÃ©gicas em mercados de tissue..."
+- ✅ Depois: "Aquisições estratégicas em mercados de tissue..."
+
+**Solução implementada:**
+- Adicionado BOM (Byte Order Mark) UTF-8 ao início do arquivo CSV
+- BOM: `\uFEFF` (U+FEFF Zero Width No-Break Space)
+- Excel agora reconhece automaticamente o encoding UTF-8
+
+**Código alterado:**
+```javascript
+// Antes
+const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+
+// Depois
+const BOM = '\uFEFF';
+const blob = new Blob([BOM + csv], { type: 'text/csv;charset=utf-8;' });
+```
+
+### ✅ Resultado
+- Todos os caracteres especiais portugueses agora aparecem corretamente no Excel
+- Compatível com Excel (Windows/Mac), Google Sheets e LibreOffice Calc
+- Encoding UTF-8 com BOM é o padrão para CSV em português
+
+---
+
 ## v1.2.2 - Melhorias nos Botões/Tabs BSC (Novembro 2024)
 
 ### 🎨 Alterações Visuais - Tabs Elegantes

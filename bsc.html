@@ -645,7 +645,9 @@
 					csv += '\n';
 				}
 
-				const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+				// Adicionar BOM UTF-8 para Excel reconhecer caracteres especiais
+				const BOM = '\uFEFF';
+				const blob = new Blob([BOM + csv], { type: 'text/csv;charset=utf-8;' });
 				const link = document.createElement('a');
 				link.href = URL.createObjectURL(blob);
 				link.download = 'Navigator_BSC_2026-2028.csv';
