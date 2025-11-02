@@ -1,0 +1,44 @@
+# Navigator Strategic Plan - Git Ignore
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# Temporary files
+temp/
+*.tmp
+*.bak
+*.log
+
+# Build outputs (se usar ferramentas futuras)
+node_modules/
+dist/
+build/
+.cache/
+
+# Ficheiros originais grandes (manter local, não versionar)
+temp/*.pptx
+temp/*.pdf
+*.psd
+*.ai
+
+# Imagens não otimizadas (se converter para webp)
+images/*.png.backup
+images/*.jpg.backup

@@ -1,0 +1,395 @@
+/*
+	Navigator Company Theme - Paleta de Cores Oficial
+	Baseado no template Dimension by HTML5 UP
+*/
+
+:root {
+	/* Paleta Navigator */
+	--nav-dk1: #1C3D2E;     /* Texto principal / títulos / botões sólidos */
+	--nav-lt1: #FFFFFF;     /* Fundo light e texto invertido */
+	--nav-dk2: #3C3C3C;     /* Texto secundário */
+	--nav-lt2: #C7E7A1;     /* Fundo hero/chapters */
+	--nav-accent1: #B3E28D; /* Primária de realce */
+	--nav-accent2: #E6E8A4;
+	--nav-accent3: #A8CE68;
+	--nav-accent4: #7AA64A;
+	--nav-accent5: #665C3B;
+	--nav-accent6: #F2F2D5;
+	--nav-link: #1C3D2E;
+	--nav-link-visited: #557A5B;
+
+	/* Gradientes */
+	--nav-gradient-hero: linear-gradient(180deg, var(--nav-lt2), var(--nav-accent6));
+	--nav-gradient-section: linear-gradient(135deg, rgba(199, 231, 161, 0.1), rgba(242, 242, 213, 0.1));
+}
+
+/* Override das cores principais do template */
+body {
+	background-color: var(--nav-dk1);
+	color: var(--nav-lt1);
+}
+
+#wrapper {
+	background-color: rgba(28, 61, 46, 0.85);
+}
+
+/* Background com imagem desfocada */
+#bg {
+	background-image: url('../../images/bg.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	filter: blur(4px);
+	-webkit-filter: blur(4px);
+}
+
+#bg:before {
+	background: rgba(28, 61, 46, 0.60);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/* Header / Hero */
+#header {
+	background: linear-gradient(135deg, rgba(199, 231, 161, 0.95), rgba(242, 242, 213, 0.95));
+	color: var(--nav-dk1);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+}
+
+#header h1 {
+	color: var(--nav-dk1);
+	font-weight: 700;
+	text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+#header p {
+	color: var(--nav-dk1);
+	font-weight: 500;
+}
+
+/* Logo */
+#header .logo {
+	border-color: var(--nav-dk1);
+}
+
+#header .logo .icon:before {
+	color: var(--nav-dk1);
+}
+
+/* Navegação */
+nav ul li a {
+	color: var(--nav-dk1);
+	border-color: var(--nav-dk1);
+	transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+	background-color: var(--nav-accent4);
+	color: var(--nav-lt1);
+	border-color: var(--nav-accent4);
+}
+
+/* Artigos / Secções */
+#main article {
+	background-color: rgba(255, 255, 255, 0.98);
+	color: var(--nav-dk1) !important;
+	border-color: var(--nav-accent3);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+#main article h2.major {
+	color: var(--nav-dk1) !important;
+	border-bottom-color: var(--nav-accent3);
+	font-weight: 700;
+}
+
+#main article h3,
+#main article h4 {
+	color: var(--nav-dk1) !important;
+	font-weight: 600;
+}
+
+#main article h5,
+#main article h6 {
+	color: var(--nav-dk1) !important;
+	font-weight: 600;
+}
+
+#main article p {
+	color: var(--nav-dk1) !important;
+	font-weight: 500;
+}
+
+#main article ul li,
+#main article ol li {
+	color: var(--nav-dk1) !important;
+	font-weight: 500;
+}
+
+#main article strong {
+	color: var(--nav-dk1) !important;
+	font-weight: 700;
+}
+
+#main article em {
+	color: var(--nav-dk1) !important;
+}
+
+/* Links dentro de artigos */
+#main article a {
+	color: var(--nav-link);
+	border-bottom-color: rgba(28, 61, 46, 0.3);
+}
+
+#main article a:hover {
+	color: var(--nav-accent4);
+	border-bottom-color: var(--nav-accent4);
+}
+
+#main article a:visited {
+	color: var(--nav-link-visited);
+}
+
+/* Botões */
+.button {
+	background-color: transparent;
+	color: var(--nav-dk1);
+	border-color: var(--nav-dk1);
+	transition: all 0.3s ease;
+}
+
+.button:hover {
+	background-color: var(--nav-accent4);
+	color: var(--nav-lt1);
+	border-color: var(--nav-accent4);
+}
+
+.button.primary {
+	background-color: var(--nav-dk1);
+	color: var(--nav-lt1);
+	border-color: var(--nav-dk1);
+}
+
+.button.primary:hover {
+	background-color: var(--nav-accent4);
+	border-color: var(--nav-accent4);
+}
+
+/* Cards de destaque */
+.highlight-card {
+	background: rgba(255, 255, 255, 0.85);
+	border-left: 4px solid var(--nav-accent3);
+	padding: 1.5rem;
+	margin: 1rem 0;
+	border-radius: 4px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(168, 206, 104, 0.3);
+}
+
+.highlight-card * {
+	color: var(--nav-dk1) !important;
+}
+
+.highlight-card h3,
+.highlight-card h4,
+.highlight-card h5 {
+	color: var(--nav-dk1) !important;
+	margin-top: 0;
+	font-weight: 700;
+}
+
+.highlight-card p,
+.highlight-card li {
+	color: var(--nav-dk1) !important;
+	font-weight: 500;
+}
+
+.highlight-card strong {
+	color: var(--nav-dk1) !important;
+	font-weight: 700;
+}
+
+.highlight-card ul,
+.highlight-card ol {
+	color: var(--nav-dk1) !important;
+}
+
+/* Footer */
+#footer {
+	background-color: rgba(28, 61, 46, 0.9);
+	color: var(--nav-lt2);
+}
+
+#footer a {
+	color: var(--nav-accent1);
+}
+
+#footer a:hover {
+	color: var(--nav-lt1);
+}
+
+/* Tabelas */
+table {
+	border-color: var(--nav-accent2);
+}
+
+table thead {
+	background-color: var(--nav-lt2);
+	color: var(--nav-dk1);
+}
+
+table tbody tr {
+	border-color: var(--nav-accent6);
+}
+
+table tbody tr:nth-child(2n+1) {
+	background-color: rgba(242, 242, 213, 0.3);
+}
+
+/* Disclaimer académico */
+.academic-disclaimer {
+	background-color: #FFF9E6;
+	border: 2px solid var(--nav-accent5);
+	padding: 1.25rem;
+	margin: 2rem 0;
+	border-radius: 6px;
+	font-size: 0.95rem;
+	color: var(--nav-dk1);
+	box-shadow: 0 2px 8px rgba(102, 92, 59, 0.1);
+}
+
+.academic-disclaimer strong {
+	color: var(--nav-dk1);
+	font-weight: 700;
+}
+
+.academic-disclaimer p {
+	color: var(--nav-dk1);
+	margin: 0.5rem 0;
+}
+
+/* Melhorias de contraste para leitura */
+blockquote {
+	border-left-color: var(--nav-accent3);
+	background: rgba(255, 255, 255, 0.6);
+	color: var(--nav-dk1) !important;
+	font-weight: 600;
+}
+
+blockquote strong {
+	color: var(--nav-dk1) !important;
+	font-weight: 700;
+}
+
+ul.alt li,
+ol li {
+	color: var(--nav-dk1) !important;
+	font-weight: 500;
+}
+
+ul li,
+ol li {
+	color: var(--nav-dk1) !important;
+	font-weight: 500;
+}
+
+/* Títulos em destaque */
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+	color: var(--nav-dk1) !important;
+}
+
+/* Estilos inline com background gradiente */
+[style*="background: var(--nav-gradient-section)"] {
+	background: rgba(255, 255, 255, 0.8) !important;
+	color: var(--nav-dk1) !important;
+}
+
+/* Tabelas - melhor contraste */
+table {
+	color: var(--nav-dk1);
+}
+
+table thead th {
+	color: var(--nav-dk1) !important;
+	font-weight: 700;
+}
+
+table tbody tr {
+	color: var(--nav-dk1) !important;
+}
+
+table tbody td {
+	color: var(--nav-dk1) !important;
+	font-weight: 500;
+}
+
+table td strong {
+	color: var(--nav-dk1) !important;
+	font-weight: 700;
+}
+
+table td span {
+	color: var(--nav-dk1) !important;
+}
+
+table ul li,
+table ol li {
+	color: var(--nav-dk1) !important;
+}
+
+/* Forçar contraste em TODOS os elementos de texto */
+p, li, td, th, div, span, label {
+	color: var(--nav-dk1) !important;
+}
+
+/* Apenas links mantêm cor diferente */
+a {
+	color: var(--nav-link) !important;
+}
+
+a:hover {
+	color: var(--nav-accent4) !important;
+}
+
+/* Footer exceção (texto claro sobre fundo escuro) */
+#footer,
+#footer * {
+	color: var(--nav-lt1) !important;
+}
+
+#footer a {
+	color: var(--nav-accent1) !important;
+}
+
+/* Navegação exceção */
+nav ul li a {
+	color: var(--nav-dk1) !important;
+}
+
+/* Responsivo - manter identidade visual */
+@media screen and (max-width: 736px) {
+	#header {
+		padding: 4rem 2rem 3rem 2rem;
+	}
+
+	nav ul li a {
+		padding: 0.5rem 1rem;
+	}
+
+	.highlight-card {
+		padding: 1rem;
+	}
+}

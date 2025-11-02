@@ -1,0 +1,677 @@
+<!DOCTYPE HTML>
+<!--
+	Balanced Scorecard - Navigator Company 2026-2028
+	Trabalho Académico - MBA ISAG
+-->
+<html lang="pt">
+	<head>
+		<title>Balanced Scorecard Navigator 2026-2028 | MBA ISAG</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="image/png" href="images/logo_Navigator_vp_pos_rgb.png" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/theme.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Background consistente com a home */
+			body {
+				background-color: var(--nav-dk1);
+				color: var(--nav-lt1);
+				padding: 0;
+				min-height: 100vh;
+				position: relative;
+			}
+
+			/* Background layer com imagem desfocada */
+			body::before {
+				content: '';
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image: url('images/bg.png');
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				filter: blur(4px);
+				-webkit-filter: blur(4px);
+				z-index: -2;
+			}
+
+			/* Overlay escuro */
+			body::after {
+				content: '';
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: rgba(28, 61, 46, 0.60);
+				backdrop-filter: blur(12px);
+				-webkit-backdrop-filter: blur(12px);
+				z-index: -1;
+			}
+
+			.bsc-container {
+				max-width: 1400px;
+				margin: 0 auto;
+				padding: 3rem 2rem;
+				position: relative;
+				z-index: 1;
+			}
+
+			.bsc-header {
+				text-align: center;
+				margin-bottom: 3rem;
+				padding: 3rem 2rem;
+				background: linear-gradient(135deg, rgba(199, 231, 161, 0.95), rgba(242, 242, 213, 0.95));
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px);
+				border-radius: 12px;
+				box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+			}
+
+			.bsc-header h1 {
+				color: var(--nav-dk1);
+				margin-bottom: 0.5rem;
+				font-size: 2.5rem;
+				font-weight: 700;
+				text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+			}
+
+			.bsc-header .subtitle {
+				color: var(--nav-dk1);
+				font-size: 1.2rem;
+				font-weight: 500;
+			}
+
+			.bsc-header p {
+				color: var(--nav-dk1);
+				font-weight: 500;
+			}
+
+			.bsc-controls {
+				display: flex;
+				justify-content: center;
+				gap: 0;
+				margin: 2rem 0;
+				flex-wrap: wrap;
+				background: rgba(255, 255, 255, 0.9);
+				border-radius: 8px;
+				padding: 0.5rem;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+				max-width: 600px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			/* Tabs elegantes */
+			.bsc-controls button {
+				padding: 0.75rem 1.5rem;
+				border: none;
+				background: transparent;
+				color: var(--nav-dk1);
+				border-radius: 6px;
+				cursor: pointer;
+				font-weight: 600;
+				transition: all 0.2s ease;
+				font-size: 0.85rem;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+				flex: 1;
+				min-width: 140px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				line-height: 1.2;
+			}
+
+			.bsc-controls button:hover {
+				background: rgba(122, 166, 74, 0.15);
+				color: var(--nav-dk1);
+			}
+
+			.bsc-controls button.active {
+				background: var(--nav-dk1);
+				color: var(--nav-lt1);
+				box-shadow: 0 2px 6px rgba(28, 61, 46, 0.3);
+			}
+
+			/* Cards View */
+			.bsc-cards {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+				gap: 2rem;
+				margin-bottom: 3rem;
+			}
+
+			.bsc-card {
+				background: white;
+				border-radius: 12px;
+				padding: 2rem;
+				box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+				border-top: 6px solid;
+			}
+
+			.bsc-card:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+			}
+
+			.bsc-card.financeira {
+				border-top-color: var(--nav-accent4);
+			}
+
+			.bsc-card.clientes {
+				border-top-color: var(--nav-accent3);
+			}
+
+			.bsc-card.processos {
+				border-top-color: var(--nav-accent1);
+			}
+
+			.bsc-card.aprendizagem {
+				border-top-color: var(--nav-accent2);
+			}
+
+			.bsc-card-header {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				margin-bottom: 1.5rem;
+			}
+
+			.bsc-icon {
+				width: 60px;
+				height: 60px;
+				flex-shrink: 0;
+			}
+
+			.bsc-card h2 {
+				color: var(--nav-dk1);
+				font-size: 1.5rem;
+				margin: 0;
+			}
+
+			.bsc-section {
+				margin: 1.5rem 0;
+			}
+
+			.bsc-section h3 {
+				color: var(--nav-dk1);
+				font-size: 1.1rem;
+				margin-bottom: 0.75rem;
+				padding-bottom: 0.5rem;
+				border-bottom: 2px solid var(--nav-lt2);
+			}
+
+			.bsc-section ul,
+			.bsc-section ol {
+				margin: 0;
+				padding-left: 1.5rem;
+			}
+
+			.bsc-section li {
+				margin: 0.5rem 0;
+				line-height: 1.6;
+				color: var(--nav-dk2);
+			}
+
+			/* Table View */
+			.bsc-table-wrapper {
+				background: white;
+				border-radius: 12px;
+				padding: 2rem;
+				box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+				overflow-x: auto;
+				display: none;
+			}
+
+			.bsc-table-wrapper.active {
+				display: block;
+			}
+
+			.bsc-table {
+				width: 100%;
+				border-collapse: collapse;
+				font-size: 0.95rem;
+			}
+
+			.bsc-table th {
+				background: var(--nav-lt2);
+				color: var(--nav-dk1);
+				padding: 1rem;
+				text-align: left;
+				font-weight: 600;
+				border-bottom: 3px solid var(--nav-dk1);
+			}
+
+			.bsc-table td {
+				padding: 1rem;
+				border-bottom: 1px solid var(--nav-accent6);
+				vertical-align: top;
+			}
+
+			.bsc-table tr:hover {
+				background: rgba(199, 231, 161, 0.1);
+			}
+
+			.bsc-table ul {
+				margin: 0;
+				padding-left: 1.25rem;
+			}
+
+			.bsc-table li {
+				margin: 0.4rem 0;
+				line-height: 1.5;
+			}
+
+			.perspective-label {
+				font-weight: 700;
+				color: var(--nav-dk1);
+				padding: 0.5rem 1rem;
+				border-radius: 6px;
+				display: inline-block;
+			}
+
+			.perspective-label.financeira {
+				background: rgba(122, 166, 74, 0.2);
+			}
+
+			.perspective-label.clientes {
+				background: rgba(168, 206, 104, 0.2);
+			}
+
+			.perspective-label.processos {
+				background: rgba(179, 226, 141, 0.2);
+			}
+
+			.perspective-label.aprendizagem {
+				background: rgba(230, 232, 164, 0.2);
+			}
+
+			/* Back button estilo home */
+			.back-link {
+				display: inline-block;
+				margin-bottom: 2rem;
+				padding: 0.85rem 2rem;
+				background: rgba(255, 255, 255, 0.95);
+				color: var(--nav-dk1);
+				text-decoration: none;
+				border-radius: 4px;
+				border: 2px solid var(--nav-dk1);
+				font-weight: 600;
+				transition: all 0.3s ease;
+				letter-spacing: 0.075em;
+				text-transform: uppercase;
+				font-size: 0.8rem;
+			}
+
+			.back-link:hover {
+				background: var(--nav-accent4);
+				color: var(--nav-lt1);
+				border-color: var(--nav-accent4);
+				transform: translateY(-2px);
+				box-shadow: 0 4px 12px rgba(122, 166, 74, 0.4);
+			}
+
+			/* Responsive */
+			@media screen and (max-width: 736px) {
+				.bsc-header h1 {
+					font-size: 1.8rem;
+				}
+
+				.bsc-cards {
+					grid-template-columns: 1fr;
+				}
+
+				.bsc-controls {
+					flex-direction: column;
+					max-width: 90%;
+				}
+
+				.bsc-controls button {
+					width: 100%;
+					min-width: auto;
+				}
+
+				.bsc-table-wrapper {
+					padding: 1rem;
+				}
+
+				.bsc-table {
+					font-size: 0.85rem;
+				}
+
+				.bsc-table th,
+				.bsc-table td {
+					padding: 0.75rem 0.5rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bsc-container">
+			<a href="index.html" class="back-link">← Voltar ao Site Principal</a>
+
+			<div class="bsc-header">
+				<h1>Balanced Scorecard 2026–2028</h1>
+				<p class="subtitle">The Navigator Company | Horizonte Estratégico</p>
+				<p style="font-size: 0.9rem; color: var(--nav-dk2); margin-top: 1rem;">
+					Trabalho Académico — MBA ISAG | 10º MBA Executivo
+				</p>
+			</div>
+
+			<div class="bsc-controls">
+				<button id="viewCards" class="active">Ver Cartões</button>
+				<button id="viewTable">Ver Tabela</button>
+				<button id="exportCSV">Exportar CSV</button>
+			</div>
+
+			<!-- Cards View -->
+			<div id="cardsView" class="bsc-cards"></div>
+
+			<!-- Table View -->
+			<div id="tableView" class="bsc-table-wrapper"></div>
+
+		</div>
+
+		<script>
+			// BSC Data (JSON)
+			const bscData = {
+				"Financeira": {
+					"icon": "financeira",
+					"color": "var(--nav-accent4)",
+					"Objetivos": [
+						"1. Acelerar o Crescimento Rentável",
+						"2. Melhorar a Resiliência e a Margem",
+						"3. Maximizar o Retorno para o Acionista"
+					],
+					"KPIs": [
+						"% de crescimento do volume de negócios",
+						"% de receitas dos segmentos de Tissue e Packaging",
+						"Margem EBITDA",
+						"Rácio Dívida Líquida / EBITDA",
+						"Retorno sobre o Capital Investido (ROIC)",
+						"Política de dividendos"
+					],
+					"Metas2028": [
+						"Crescimento anual > 5%",
+						"Tissue e Packaging > 45% do total",
+						"Margem EBITDA > 22%",
+						"Rácio < 2.0x",
+						"ROIC > 12%",
+						"Manter um payout ratio sustentável"
+					],
+					"Iniciativas": [
+						"Expansão da capacidade produtiva em packaging de fibra moldada.",
+						"Aquisições estratégicas em mercados de tissue com elevado potencial.",
+						"Programa de otimização de custos energéticos e logísticos.",
+						"Foco em UWF de nicho e maior valor.",
+						"Gestão rigorosa do CAPEX, priorizando alto retorno.",
+						"Comunicação transparente da criação de valor."
+					]
+				},
+				"Clientes": {
+					"icon": "clientes",
+					"color": "var(--nav-accent3)",
+					"Objetivos": [
+						"1. Liderar no Mercado de Soluções Sustentáveis",
+						"2. Aumentar a Fidelização e Satisfação do Cliente",
+						"3. Expandir a Base de Clientes nos Novos Segmentos"
+					],
+					"KPIs": [
+						"Quota de mercado em embalagens sustentáveis (vs. plástico)",
+						"Índice de perceção da marca como líder em sustentabilidade",
+						"NPS por segmento de negócio",
+						"Taxa de retenção de clientes-chave",
+						"Nº de novos clientes em alimentar e farmacêutico",
+						"Crescimento das vendas de tissue no canal institucional (AfH)"
+					],
+					"Metas2028": [
+						"Quota de referência na Península Ibérica",
+						"Top 3 em reconhecimento de marca sustentável",
+						"NPS > 50 em todos os segmentos",
+						"Retenção > 95%",
+						"Base de clientes B2B +20%",
+						"AfH: +15%"
+					],
+					"Iniciativas": [
+						"Campanha 'Navigator Sustainable Packaging Solutions'.",
+						"Novas certificações ambientais (tissue e packaging).",
+						"Programas de co-inovação com clientes de packaging.",
+						"Reforço do suporte técnico e pós-venda.",
+						"Feiras internacionais (alimentar e saúde).",
+						"Força de vendas especializada AfH."
+					]
+				},
+				"Processos Internos": {
+					"icon": "processos",
+					"color": "var(--nav-accent1)",
+					"Objetivos": [
+						"1. Excelência em Inovação e Desenvolvimento",
+						"2. Otimizar a Eficiência Operacional e a Circularidade",
+						"3. Garantir uma Cadeia de Abastecimento Sustentável"
+					],
+					"KPIs": [
+						"Nº de novas patentes via RAIZ",
+						"Time-to-market de novos produtos",
+						"Custo de produção por tonelada",
+						"% de resíduos revalorizados",
+						"% de matéria-prima certificada (FSC/PEFC)",
+						"Pegada de carbono da logística (tCO2/ton.km)"
+					],
+					"Metas2028": [
+						"> 10 novas patentes/ano",
+						"-20% no ciclo de desenvolvimento",
+						"-5% no custo por tonelada",
+						"90% de revalorização",
+						"100% certificação",
+						"-10% na pegada logística"
+					],
+					"Iniciativas": [
+						"Mais investimento no RAIZ (biomateriais).",
+						"Metodologias ágeis em desenvolvimento de produto.",
+						"Indústria 4.0 para automação/otimização.",
+						"Simbiose industrial para subprodutos.",
+						"Apoio a produtores para certificação.",
+						"Rotas otimizadas e logística intermodal."
+					]
+				},
+				"Aprendizagem e Crescimento": {
+					"icon": "aprendizagem",
+					"color": "var(--nav-accent2)",
+					"Objetivos": [
+						"1. Desenvolver Competências para o Futuro",
+						"2. Fomentar Cultura de Inovação e Agilidade",
+						"3. Potenciar a Transformação Digital"
+					],
+					"KPIs": [
+						"Horas de formação/colaborador (bioeconomia, digital)",
+						"% de vagas de liderança preenchidas internamente",
+						"Índice de satisfação/engagement dos colaboradores",
+						"Nº de ideias de melhoria implementadas/ano",
+						"Nível de implementação do roadmap digital",
+						"% de vendas suportadas por plataformas digitais"
+					],
+					"Metas2028": [
+						"> 40 h/ano por colaborador",
+						"> 60% preenchimento interno",
+						"Satisfação > 85%",
+						"> 500 ideias implementadas/ano",
+						"Roadmap: 100% concluído",
+						"> 70% das vendas com suporte digital"
+					],
+					"Iniciativas": [
+						"Academia Navigator (formação interna).",
+						"Planos de sucessão e carreira.",
+						"Programa de intraempreendedorismo.",
+						"Avaliação de desempenho pró-proatividade.",
+						"Novo CRM (packaging e tissue).",
+						"Plataformas de analytics para otimização."
+					]
+				}
+			};
+
+			// SVG Icons
+			const icons = {
+				financeira: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M8 48L16 40L24 44L32 32L40 36L48 24L56 28" stroke="var(--nav-accent4)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+					<circle cx="16" cy="40" r="3" fill="var(--nav-accent4)"/>
+					<circle cx="24" cy="44" r="3" fill="var(--nav-accent4)"/>
+					<circle cx="32" cy="32" r="3" fill="var(--nav-accent4)"/>
+					<circle cx="40" cy="36" r="3" fill="var(--nav-accent4)"/>
+					<circle cx="48" cy="24" r="3" fill="var(--nav-accent4)"/>
+					<circle cx="56" cy="28" r="3" fill="var(--nav-accent4)"/>
+					<path d="M4 56H60" stroke="var(--nav-dk1)" stroke-width="2" stroke-linecap="round"/>
+					<path d="M4 8V56" stroke="var(--nav-dk1)" stroke-width="2" stroke-linecap="round"/>
+				</svg>`,
+				clientes: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="32" cy="20" r="10" stroke="var(--nav-accent3)" stroke-width="3" fill="none"/>
+					<path d="M32 30C24 30 16 34 12 40V52H52V40C48 34 40 30 32 30Z" stroke="var(--nav-accent3)" stroke-width="3" fill="rgba(168, 206, 104, 0.2)"/>
+					<path d="M48 28C50.5 28 53 26.5 53 24" stroke="var(--nav-dk1)" stroke-width="2" stroke-linecap="round"/>
+					<path d="M16 28C13.5 28 11 26.5 11 24" stroke="var(--nav-dk1)" stroke-width="2" stroke-linecap="round"/>
+				</svg>`,
+				processos: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="32" cy="32" r="18" stroke="var(--nav-accent1)" stroke-width="3" fill="none"/>
+					<path d="M32 14V20" stroke="var(--nav-dk1)" stroke-width="3" stroke-linecap="round"/>
+					<path d="M32 44V50" stroke="var(--nav-dk1)" stroke-width="3" stroke-linecap="round"/>
+					<path d="M14 32H20" stroke="var(--nav-dk1)" stroke-width="3" stroke-linecap="round"/>
+					<path d="M44 32H50" stroke="var(--nav-dk1)" stroke-width="3" stroke-linecap="round"/>
+					<circle cx="32" cy="32" r="8" fill="var(--nav-accent1)"/>
+					<path d="M32 32L42 22" stroke="var(--nav-dk1)" stroke-width="2" stroke-linecap="round"/>
+				</svg>`,
+				aprendizagem: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M32 8L8 20L32 32L56 20L32 8Z" stroke="var(--nav-accent2)" stroke-width="3" fill="rgba(230, 232, 164, 0.3)"/>
+					<path d="M8 28V42L32 54L56 42V28" stroke="var(--nav-accent2)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M32 32V54" stroke="var(--nav-dk1)" stroke-width="2" stroke-linecap="round"/>
+					<circle cx="50" cy="14" r="6" fill="var(--nav-accent3)" stroke="white" stroke-width="2"/>
+				</svg>`
+			};
+
+			// Generate Cards
+			function generateCards() {
+				const container = document.getElementById('cardsView');
+				container.innerHTML = '';
+
+				for (const [perspective, data] of Object.entries(bscData)) {
+					const card = document.createElement('div');
+					card.className = `bsc-card ${data.icon}`;
+					card.innerHTML = `
+						<div class="bsc-card-header">
+							<div class="bsc-icon">${icons[data.icon]}</div>
+							<h2>${perspective}</h2>
+						</div>
+						<div class="bsc-section">
+							<h3>Objetivos Estratégicos</h3>
+							<ol>${data.Objetivos.map(obj => `<li>${obj}</li>`).join('')}</ol>
+						</div>
+						<div class="bsc-section">
+							<h3>KPIs</h3>
+							<ul>${data.KPIs.map(kpi => `<li>${kpi}</li>`).join('')}</ul>
+						</div>
+						<div class="bsc-section">
+							<h3>Metas 2028</h3>
+							<ul>${data.Metas2028.map(meta => `<li>${meta}</li>`).join('')}</ul>
+						</div>
+						<div class="bsc-section">
+							<h3>Iniciativas Estratégicas</h3>
+							<ul>${data.Iniciativas.map(ini => `<li>${ini}</li>`).join('')}</ul>
+						</div>
+					`;
+					container.appendChild(card);
+				}
+			}
+
+			// Generate Table
+			function generateTable() {
+				const container = document.getElementById('tableView');
+				let tableHTML = `
+					<table class="bsc-table">
+						<thead>
+							<tr>
+								<th style="width: 15%;">Perspectiva</th>
+								<th>Objetivos Estratégicos</th>
+								<th>KPIs</th>
+								<th>Metas 2028</th>
+								<th>Iniciativas Estratégicas</th>
+							</tr>
+						</thead>
+						<tbody>
+				`;
+
+				for (const [perspective, data] of Object.entries(bscData)) {
+					tableHTML += `
+						<tr>
+							<td><span class="perspective-label ${data.icon}">${perspective}</span></td>
+							<td><ol>${data.Objetivos.map(obj => `<li>${obj}</li>`).join('')}</ol></td>
+							<td><ul>${data.KPIs.map(kpi => `<li>${kpi}</li>`).join('')}</ul></td>
+							<td><ul>${data.Metas2028.map(meta => `<li>${meta}</li>`).join('')}</ul></td>
+							<td><ul>${data.Iniciativas.map(ini => `<li>${ini}</li>`).join('')}</ul></td>
+						</tr>
+					`;
+				}
+
+				tableHTML += `</tbody></table>`;
+				container.innerHTML = tableHTML;
+			}
+
+			// Export to CSV
+			function exportToCSV() {
+				let csv = 'Perspectiva;Objetivos Estratégicos;KPIs;Metas 2028;Iniciativas Estratégicas\n';
+
+				for (const [perspective, data] of Object.entries(bscData)) {
+					const maxLength = Math.max(
+						data.Objetivos.length,
+						data.KPIs.length,
+						data.Metas2028.length,
+						data.Iniciativas.length
+					);
+
+					for (let i = 0; i < maxLength; i++) {
+						const row = [
+							i === 0 ? perspective : '',
+							data.Objetivos[i] || '',
+							data.KPIs[i] || '',
+							data.Metas2028[i] || '',
+							data.Iniciativas[i] || ''
+						];
+						csv += row.map(cell => `"${cell}"`).join(';') + '\n';
+					}
+					csv += '\n';
+				}
+
+				const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+				const link = document.createElement('a');
+				link.href = URL.createObjectURL(blob);
+				link.download = 'Navigator_BSC_2026-2028.csv';
+				link.click();
+			}
+
+			// Event Listeners
+			document.getElementById('viewCards').addEventListener('click', function() {
+				document.getElementById('cardsView').style.display = 'grid';
+				document.getElementById('tableView').classList.remove('active');
+				this.classList.add('active');
+				document.getElementById('viewTable').classList.remove('active');
+			});
+
+			document.getElementById('viewTable').addEventListener('click', function() {
+				document.getElementById('cardsView').style.display = 'none';
+				document.getElementById('tableView').classList.add('active');
+				this.classList.add('active');
+				document.getElementById('viewCards').classList.remove('active');
+			});
+
+			document.getElementById('exportCSV').addEventListener('click', exportToCSV);
+
+			// Initialize
+			generateCards();
+			generateTable();
+		</script>
+	</body>
+</html>
