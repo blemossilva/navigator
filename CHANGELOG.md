@@ -1,5 +1,43 @@
 # Changelog - Microsite Navigator 2026-2028
 
+## v1.2.4 - Adicionado Link para Download do PDF (Novembro 2024)
+
+### ✨ Nova Funcionalidade
+
+#### Link para Download da Apresentação PDF
+**Implementação:**
+- Adicionado link no menu de navegação principal: "📄 Download PDF"
+- Criada seção destacada na página "Sobre o Projeto" com botão de download
+- Link aponta para `documentos/Navigator_v1.pdf`
+- Atributo `download` garante download automático
+- Atributo `target="_blank"` abre em nova aba
+
+**Localização dos links:**
+1. **Menu de navegação** (Header):
+   - Entre "Balanced Scorecard" e "Créditos"
+   - Formato: Link com ícone 📄
+
+2. **Seção "Sobre o Projeto"**:
+   - Box destacado no final da seção
+   - Background gradiente verde claro
+   - Botão primário com estilo Navigator
+   - Título: "📄 Apresentação Completa"
+   - Descrição explicativa
+
+**Estilo do botão destacado:**
+```css
+background: var(--nav-accent4);
+padding: 1rem 2rem;
+border-radius: 4px;
+text-transform: uppercase;
+letter-spacing: 0.075em;
+```
+
+### 🎯 Objetivo
+Facilitar acesso à apresentação completa do Plano Estratégico em formato PDF para download.
+
+---
+
 ## v1.2.3 - Correção de Encoding UTF-8 no CSV (Novembro 2024)
 
 ### 🐛 Correção de Bug
