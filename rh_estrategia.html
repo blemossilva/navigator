@@ -1,0 +1,1083 @@
+<!DOCTYPE HTML>
+<!--
+	Estratégia de RH - Navigator Company 2026-2028
+	Trabalho Académico - MBA ISAG
+-->
+<html lang="pt">
+
+<head>
+    <title>Estratégia RH 2026-2028 | Navigator Company</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="icon" type="image/png" href="images/logo_Navigator_vp_pos_rgb.png" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/theme.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* RH Specific Styles - High Contrast "Paper" Theme */
+        body {
+            background-color: #1b1f22;
+            /* Keep outer bg dark like main site */
+            color: #444;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        /* Background image for context, but content will be on white */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('images/trabalhador_01.png');
+            background-position: center;
+            background-size: cover;
+            filter: blur(8px) brightness(0.4);
+            z-index: -2;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(28, 61, 46, 0.85);
+            /* Darker overlay for readability */
+            backdrop-filter: blur(5px);
+            z-index: -1;
+        }
+
+        .rh-container {
+            max-width: 1200px;
+            /* Slightly narrower for reading measure */
+            margin: 3rem auto;
+            padding: 3rem;
+            position: relative;
+            z-index: 1;
+            background-color: #ffffff;
+            /* White paper style */
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .rh-header {
+            text-align: center;
+            padding: 2rem 1rem;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 2rem;
+        }
+
+        .rh-header h1 {
+            font-size: 2.2rem;
+            color: #1b1f22;
+            /* Maximum contrast */
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .rh-header .tagline {
+            font-size: 1.3rem;
+            color: #2e7d32;
+            /* Darker green */
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        .rh-header .intro-text {
+            margin-top: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #1b1f22;
+            /* Darkest grey */
+            line-height: 1.8;
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
+
+        .rh-container strong,
+        .rh-container b {
+            color: #1b1f22;
+            /* Dark grey for contrast on white */
+        }
+
+        /* Tabs */
+        .rh-tabs {
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 3rem;
+            flex-wrap: nowrap;
+            /* Prevent wrapping on desktop */
+            overflow-x: auto;
+            /* Scrollable on small screens */
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .rh-tab-btn {
+            padding: 1rem 2rem;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            color: #666 !important;
+            /* Force dark grey for inactive */
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 1rem;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .rh-tab-btn:hover {
+            color: #2e7d32 !important;
+            background: #f1f8e9;
+        }
+
+        .rh-tab-btn.active {
+            color: #2e7d32 !important;
+            border-bottom-color: #2e7d32;
+            background: none;
+        }
+
+        /* Sections */
+        .rh-section {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .rh-section.active {
+            display: block;
+        }
+
+        /* Dashboard Grid */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .chart-card {
+            background: #fcfcfc;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .chart-card h3 {
+            color: #1b1f22;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #2e7d32;
+            /* Thicker green accent */
+            display: inline-block;
+            padding-bottom: 0.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 280px;
+            width: 100%;
+        }
+
+        .chart-note {
+            font-size: 0.95rem;
+            margin-top: 1rem;
+            color: #1b1f22;
+            font-weight: 500;
+            font-style: italic;
+            background: #f0f0f0;
+            padding: 0.6rem;
+            border-radius: 4px;
+            border-left: 4px solid #2e7d32;
+        }
+
+        /* Strategic Plan Cards */
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .strategy-card {
+            background: #fff;
+            color: #1b1f22;
+            border-radius: 8px;
+            padding: 2rem;
+            border: 1px solid #ddd;
+            border-top: 5px solid #2e7d32;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .strategy-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .strategy-card h3 {
+            color: #1b1f22;
+            margin-bottom: 1rem;
+            font-weight: 900;
+            font-size: 1.25rem;
+        }
+
+        .strategy-card ul {
+            padding-left: 1.2rem;
+            margin: 0;
+        }
+
+        .strategy-card li {
+            margin-bottom: 0.6rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .strategy-card strong {
+            color: #2e7d32;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #666;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            background: #eee;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .back-link:hover {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        /* Scorecard Styles */
+        .scorecard-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .scorecard-table th,
+        .scorecard-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .scorecard-table th {
+            background-color: #2e7d32;
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.85rem;
+        }
+
+        .scorecard-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .perspective-header {
+            background-color: #f1f8e9;
+            font-weight: 800;
+            color: #2e7d32;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        .kpi-row:hover {
+            background-color: #f9f9f9;
+            transition: background 0.2s;
+        }
+
+        .meta-cell {
+            font-weight: 700;
+            color: #1b1f22;
+            text-align: center;
+        }
+
+        .baseline-cell {
+            color: #666;
+            font-style: italic;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .perspective-icon {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Perspective-specific colors */
+        .p-financeira {
+            border-left: 5px solid #1565c0;
+        }
+
+        .p-processos {
+            border-left: 5px solid #ef6c00;
+        }
+
+        .p-pessoas {
+            border-left: 5px solid #7b1fa2;
+        }
+
+        .p-aprendizagem {
+            border-left: 5px solid #2e7d32;
+        }
+
+        /* CSV Viewer Styles */
+        .csv-viewer-container {
+            margin-top: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .csv-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .csv-table th {
+            background-color: #f5f5f5;
+            padding: 0.8rem;
+            text-align: left;
+            border-bottom: 2px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .csv-table td {
+            padding: 0.6rem 0.8rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .csv-table tr:hover {
+            background-color: #fcfcfc;
+        }
+
+        .download-btn-group {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .download-card {
+            flex: 1;
+            min-width: 250px;
+            background: #f1f8e9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid #2e7d32;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .download-card h4 {
+            margin-bottom: 0.5rem;
+            color: #1b1f22;
+        }
+
+        .download-card p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .rh-container {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .rh-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .rh-header .tagline {
+                font-size: 1.2rem;
+            }
+
+            .rh-tab-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="rh-container">
+        <a href="index.html" class="back-link">← Voltar ao Menu Principal</a>
+
+        <header class="rh-header">
+            <h1>Plano Estratégico de RH 2026-2028</h1>
+            <p class="tagline">"People for a Sustainable Bio-Future"</p>
+            <div
+                style="margin-top: 1rem; font-size: 0.95rem; color: #555; background: #f9f9f9; display: inline-block; padding: 0.5rem 1.5rem; border-radius: 20px; border: 1px solid #eee;">
+                <strong>Módulo:</strong> Direção Estratégica de Pessoas | <strong>Docente:</strong> Professor Protásio
+                Leão
+            </div>
+            <p class="intro-text" style="margin-top: 2rem;">
+                A estratégia de RH assenta na criação de uma organização <strong>ambidestra</strong>: eficiente e
+                austera no negócio maduro, mas ágil e inovadora nos novos vetores de crescimento.
+            </p>
+        </header>
+
+        <div class="rh-tabs">
+            <button class="rh-tab-btn active" onclick="switchTab('diagnostico')">Diagnóstico 2020-2024</button>
+            <button class="rh-tab-btn" onclick="switchTab('estrategia')">Eixos Estratégicos & Plano</button>
+            <button class="rh-tab-btn" onclick="switchTab('scorecard')">HR Scorecard 2026-2028</button>
+            <button class="rh-tab-btn" onclick="switchTab('documentos')">Documentos & Dados</button>
+        </div>
+
+        <!-- DIAGNOSTICO -->
+        <div id="diagnostico" class="rh-section active">
+            <div class="dashboard-grid" style="margin-bottom: 3rem;">
+                <!-- Headcount -->
+                <div class="chart-card">
+                    <h3>Evolução do Headcount</h3>
+                    <div class="chart-container">
+                        <canvas id="chartHeadcount"></canvas>
+                    </div>
+                    <p class="chart-note">
+                        Crescimento impulsionado por aquisições (Accrol, Ejea) e expansão em Packaging.
+                    </p>
+                </div>
+
+                <!-- Age Structure -->
+                <div class="chart-card">
+                    <h3>Renovação (% < 30 anos)</h3>
+                            <div class="chart-container">
+                                <canvas id="chartAge"></canvas>
+                            </div>
+                </div>
+
+                <!-- Gender Diversity -->
+                <div class="chart-card">
+                    <h3>Diversidade (% Mulheres)</h3>
+                    <div class="chart-container">
+                        <canvas id="chartGender"></canvas>
+                    </div>
+                </div>
+
+                <!-- Turnover -->
+                <div class="chart-card">
+                    <h3>Turnover Global</h3>
+                    <div class="chart-container">
+                        <canvas id="chartTurnover"></canvas>
+                    </div>
+                    <p class="chart-note">
+                        Estabilização em 5.8% após pico pós-pandemia.
+                    </p>
+                </div>
+
+                <!-- Training -->
+                <div class="chart-card">
+                    <h3>Formação (Horas/Col.)</h3>
+                    <div class="chart-container">
+                        <canvas id="chartTraining"></canvas>
+                    </div>
+                </div>
+
+                <!-- Safety -->
+                <div class="chart-card">
+                    <h3>Segurança (LTI)</h3>
+                    <div class="chart-container">
+                        <canvas id="chartSafety"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SWOT Matrix -->
+            <h2
+                style="border-bottom: 2px solid #ddd; margin-bottom: 2rem; padding-bottom: 0.5rem; color: #333; font-weight: 800; font-size: 1.5rem;">
+                Matriz SWOT de Capital Humano</h2>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+                <!-- Strengths -->
+                <div class="swot-box" style="background: #e8f5e9; border-left: 5px solid #4caf50;">
+                    <h3 style="color: #2e7d32;">💪 Forças (Strengths)</h3>
+                    <ul>
+                        <li>Cultura de segurança robusta ("Missão Zero").</li>
+                        <li>Elevado investimento em formação e ROI.</li>
+                        <li>Remuneração competitiva (SCR 1.25).</li>
+                        <li>Elevado Engagement (78%).</li>
+                    </ul>
+                </div>
+                <!-- Weaknesses -->
+                <div class="swot-box" style="background: #ffebee; border-left: 5px solid #f44336;">
+                    <h3 style="color: #c62828;">⚠️ Fraquezas (Weaknesses)</h3>
+                    <ul>
+                        <li>Baixa representatividade feminina (19.5%).</li>
+                        <li>Turnover em tendência crescente.</li>
+                        <li>Perda de senioridade/know-how tácito.</li>
+                        <li>Complexidade na integração multinacional.</li>
+                    </ul>
+                </div>
+                <!-- Opportunities -->
+                <div class="swot-box" style="background: #e3f2fd; border-left: 5px solid #2196f3;">
+                    <h3 style="color: #1565c0;">🚀 Oportunidades (Opportunities)</h3>
+                    <ul>
+                        <li>Digitalização para aumentar produtividade.</li>
+                        <li>Atração de talento via propósito "Bio-Future".</li>
+                        <li>Novos modelos de trabalho flexíveis.</li>
+                        <li>Integração de talento diverso (ES/UK).</li>
+                    </ul>
+                </div>
+                <!-- Threats -->
+                <div class="swot-box" style="background: #fff3e0; border-left: 5px solid #ff9800;">
+                    <h3 style="color: #ef6c00;">⚡ Ameaças (Threats)</h3>
+                    <ul>
+                        <li>Escassez crítica de talento técnico e digital.</li>
+                        <li>Inflação salarial e pressão de custos fixos.</li>
+                        <li>Envelhecimento da força de trabalho industrial.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ESTRATEGIA -->
+        <div id="estrategia" class="rh-section">
+
+            <h2
+                style="border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; margin-bottom: 2rem; color: #333; font-weight: 800;">
+                Os 4 Eixos de Transformação</h2>
+
+            <div class="strategy-grid">
+
+                <div class="strategy-card" style="border-top-color: #558b2f;">
+                    <h3>1. Organização Ambidestra</h3>
+                    <p>Criar modelos de trabalho diferenciados:</p>
+                    <ul>
+                        <li><strong>Velocidade de Cruzeiro (UWF):</strong> Foco em eficiência, Lean e custos.</li>
+                        <li><strong>Velocidade de Aceleração (Tissue/Pac.):</strong> Foco em inovação, agilidade e
+                            time-to-market.</li>
+                    </ul>
+                </div>
+
+                <div class="strategy-card" style="border-top-color: #1976d2;">
+                    <h3>2. Skills Revolution</h3>
+                    <p>Combater a obsolescência de competências:</p>
+                    <ul>
+                        <li>Upskilling digital para operadores (Indústria 4.0).</li>
+                        <li>Green Skills (Economia Circular, ESG) para 100% da força de trabalho.</li>
+                        <li>Academia Navigator 2.0.</li>
+                    </ul>
+                </div>
+
+                <div class="strategy-card" style="border-top-color: #6a1b9a;">
+                    <h3>3. Cultura "One Navigator"</h3>
+                    <p>Harmonização em contexto multinacional:</p>
+                    <ul>
+                        <li>Identidade unificada em PT, ES e UK.</li>
+                        <li>Diversidade e Inclusão (Meta: 25% Mulheres).</li>
+                        <li>Liderança de proximidade.</li>
+                    </ul>
+                </div>
+
+                <div class="strategy-card" style="border-top-color: #d84315;">
+                    <h3>4. Data-Driven HR</h3>
+                    <p>Gestão baseada em evidências:</p>
+                    <ul>
+                        <li>People Analytics preditivo (Risco de saída).</li>
+                        <li>Otimização de custos laborais.</li>
+                        <li>Personalização da experiência do colaborador.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2
+                style="border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; margin-bottom: 2rem; margin-top: 4rem; color: #333; font-weight: 800;">
+                Plano de Ações Prioritárias</h2>
+
+            <div class="strategy-grid">
+                <div class="strategy-card" style="background: #f1f8e9;">
+                    <h3>Atração & Marca Empregadora</h3>
+                    <ul>
+                        <li>Campanha global <strong>"Forest of Talent"</strong> (Tech & Bio).</li>
+                        <li>Recrutamento com IA (screening curricular).</li>
+                        <li>Programa "Women in Bio-Industry" com universidades.</li>
+                    </ul>
+                </div>
+                <div class="strategy-card" style="background: #fff8e1;">
+                    <h3>Recompensa & Carreira</h3>
+                    <ul>
+                        <li>Modelo de <strong>Scorecard Misto</strong> (60% Negócio, 20% ESG, 20% Comp.).</li>
+                        <li>Job Profiles baseados em competências (Korn Ferry).</li>
+                        <li>Benefícios flexíveis ajustados a novas necessidades.</li>
+                    </ul>
+                </div>
+                <div class="strategy-card" style="background: #e3f2fd;">
+                    <h3>Excelência Operacional</h3>
+                    <ul>
+                        <li><strong>The Navigator Passport</strong>: Onboarding 4.0 digital e imersivo.</li>
+                        <li>Knowledge Harvest: Gestão de saída e retenção de know-how de reformados.</li>
+                        <li>Lean HR: Digitalização de processos administrativos.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SCORECARD -->
+        <div id="scorecard" class="rh-section">
+            <h2
+                style="border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; margin-bottom: 2rem; color: #333; font-weight: 800;">
+                HR Balanced Scorecard (2026-2028)
+            </h2>
+            <p style="margin-bottom: 2rem; font-style: italic; color: #555;">
+                A monitorização da execução será realizada trimestralmente (QBR - Quarterly Business Reviews) e
+                anualmente.
+            </p>
+
+            <table class="scorecard-table">
+                <thead>
+                    <tr>
+                        <th>Perspetiva / KPI Estratégico</th>
+                        <th style="text-align: center;">Baseline 2024</th>
+                        <th style="text-align: center;">Meta 2026</th>
+                        <th style="text-align: center;">Meta 2027</th>
+                        <th style="text-align: center;">Meta 2028</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- FINANCEIRA -->
+                    <tr class="perspective-header">
+                        <td colspan="5"><span class="perspective-icon">💰</span> Perspetiva Financeira</td>
+                    </tr>
+                    <tr class="kpi-row p-financeira">
+                        <td>Custo de Pessoal sobre Receitas (%)</td>
+                        <td class="baseline-cell" id="val-custo-pessoal">-</td>
+                        <td class="meta-cell">&lt; 14%</td>
+                        <td class="meta-cell">&lt; 13,5%</td>
+                        <td class="meta-cell">&lt; 13%</td>
+                    </tr>
+                    <tr class="kpi-row p-financeira">
+                        <td>ROI do Capital Humano (HCROI)</td>
+                        <td class="baseline-cell" id="val-hcroi">-</td>
+                        <td class="meta-cell">1.60</td>
+                        <td class="meta-cell">1.70</td>
+                        <td class="meta-cell">1.80</td>
+                    </tr>
+
+                    <!-- PROCESSOS -->
+                    <tr class="perspective-header">
+                        <td colspan="5"><span class="perspective-icon">⚙️</span> Perspetiva de Processos</td>
+                    </tr>
+                    <tr class="kpi-row p-processos">
+                        <td>% Processos de RH Digitalizados</td>
+                        <td class="baseline-cell" id="val-digital">-</td>
+                        <td class="meta-cell">60%</td>
+                        <td class="meta-cell">80%</td>
+                        <td class="meta-cell">95%</td>
+                    </tr>
+                    <tr class="kpi-row p-processos">
+                        <td>Tempo Médio de Contratação (Dias)</td>
+                        <td class="baseline-cell" id="val-ttc">-</td>
+                        <td class="meta-cell">45</td>
+                        <td class="meta-cell">40</td>
+                        <td class="meta-cell">35</td>
+                    </tr>
+
+                    <!-- PESSOAS -->
+                    <tr class="perspective-header">
+                        <td colspan="5"><span class="perspective-icon">👥</span> Perspetiva de Pessoas</td>
+                    </tr>
+                    <tr class="kpi-row p-pessoas">
+                        <td>Índice de Engagement (%)</td>
+                        <td class="baseline-cell" id="val-engagement">-</td>
+                        <td class="meta-cell">79%</td>
+                        <td class="meta-cell">80%</td>
+                        <td class="meta-cell">&gt; 82%</td>
+                    </tr>
+                    <tr class="kpi-row p-pessoas">
+                        <td>Taxa de Retenção de Talento Crítico</td>
+                        <td class="baseline-cell" id="val-retencao">-</td>
+                        <td class="meta-cell">95%</td>
+                        <td class="meta-cell">96%</td>
+                        <td class="meta-cell">98%</td>
+                    </tr>
+                    <tr class="kpi-row p-pessoas">
+                        <td>% Mulheres em Posições de Liderança</td>
+                        <td class="baseline-cell" id="val-lideranca-fem">-</td>
+                        <td class="meta-cell">21%</td>
+                        <td class="meta-cell">23%</td>
+                        <td class="meta-cell">25%</td>
+                    </tr>
+
+                    <!-- APRENDIZAGEM -->
+                    <tr class="perspective-header">
+                        <td colspan="5"><span class="perspective-icon">🎓</span> Perspetiva de Aprendizagem</td>
+                    </tr>
+                    <tr class="kpi-row p-aprendizagem">
+                        <td>% Colaboradores com "Green Skills" Certif.</td>
+                        <td class="baseline-cell">0%</td>
+                        <td class="meta-cell">30%</td>
+                        <td class="meta-cell">60%</td>
+                        <td class="meta-cell">100%</td>
+                    </tr>
+                    <tr class="kpi-row p-aprendizagem">
+                        <td>Índice de Prontidão Digital (Digital Readiness)</td>
+                        <td class="baseline-cell" id="val-readiness">-</td>
+                        <td class="meta-cell">60%</td>
+                        <td class="meta-cell">75%</td>
+                        <td class="meta-cell">&gt; 85%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- DOCUMENTOS -->
+        <div id="documentos" class="rh-section">
+            <h2
+                style="border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; margin-bottom: 2rem; color: #333; font-weight: 800;">
+                Documentos e Dados Estratégicos
+            </h2>
+
+            <div class="download-btn-group">
+                <div class="download-card">
+                    <div>
+                        <h4>📄 Plano Estratégico de RH (PDF)</h4>
+                        <p>Documento completo com a fundamentação e eixos estratégicos para 2026-2028.</p>
+                    </div>
+                    <a href="documentos/PERH_Navigator_Estratégia_MBA_10_ISAG.pdf" target="_blank" download
+                        class="rh-tab-btn"
+                        style="background:#2e7d32; color:white !important; border-radius:4px; justify-content:center; border:none;">
+                        Download PDF
+                    </a>
+                </div>
+                <div class="download-card" style="background: #e3f2fd; border-left-color: #1565c0;">
+                    <div>
+                        <h4 style="color:#1565c0;">📊 Indicadores de RH (CSV)</h4>
+                        <p>Base de dados histórica (2020-2024) utilizada para as análises e diagnóstico.</p>
+                    </div>
+                    <a href="documentos/hr_indicators_export.csv" download class="rh-tab-btn"
+                        style="background:#1565c0; color:white !important; border-radius:4px; justify-content:center; border:none;">
+                        Download CSV
+                    </a>
+                </div>
+            </div>
+
+            <h3>Visualizador de Dados (Indicadores)</h3>
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 1rem;">Pré-visualização dos dados contidos no
+                ficheiro CSV exportado:</p>
+            <div id="csv-loading" style="text-align:center; padding: 2rem; display:none;">Carregando dados...</div>
+            <div class="csv-viewer-container" id="csv-preview-container">
+                <table class="csv-table" id="csv-preview-table">
+                    <thead>
+                        <tr id="csv-header"></tr>
+                    </thead>
+                    <tbody id="csv-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link Data -->
+    <script src="assets/js/rh_data.js"></script>
+
+    <script>
+        // Tab Logic
+        function switchTab(tabId) {
+            document.querySelectorAll('.rh-section').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.rh-tab-btn').forEach(el => el.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+
+            const btns = document.querySelectorAll('.rh-tab-btn');
+            if (tabId === 'diagnostico') btns[0].classList.add('active');
+            else if (tabId === 'estrategia') btns[1].classList.add('active');
+            else if (tabId === 'scorecard') btns[2].classList.add('active');
+            else {
+                btns[3].classList.add('active');
+                loadCSVPreview();
+            }
+        }
+
+        // Chart Configuration - Updated for High Contrast (White Background)
+        Chart.defaults.color = '#555'; // Darker text
+        Chart.defaults.borderColor = '#eee'; // Grid lines
+        Chart.defaults.font.family = "'Source Sans Pro', sans-serif";
+        Chart.defaults.font.weight = '600';
+
+        // Robust Data Finder
+        function getChartData(preferredCategory, indicatorKeyword) {
+            const keyword = indicatorKeyword.toLowerCase().replace(/\s/g, '');
+            let foundCategory = null;
+            let foundIndicator = null;
+            if (typeof rhData === 'undefined') {
+                console.error("rhData not loaded");
+                return {
+                    labels: [],
+                    data: []
+                };
+            }
+
+            // Helper to normalize and check inclusion
+            const isMatch = (key, search) => key.toLowerCase().replace(/\s/g, '').includes(search);
+
+            if (rhData[preferredCategory]) {
+                const catKeys = Object.keys(rhData[preferredCategory]);
+                const match = catKeys.find(k => isMatch(k, keyword));
+                if (match) {
+                    foundCategory = preferredCategory;
+                    foundIndicator = match;
+                }
+            }
+
+            if (!foundIndicator) {
+                for (const cat in rhData) {
+                    if (!rhData[cat]) continue;
+                    const match = Object.keys(rhData[cat]).find(k => isMatch(k, keyword));
+                    if (match) {
+                        foundCategory = cat;
+                        foundIndicator = match;
+                        break;
+                    }
+                }
+            }
+
+            if (!foundIndicator) {
+                console.warn(`Could not find indicator containing: ${indicatorKeyword}`);
+                return {
+                    labels: [],
+                    data: []
+                };
+            }
+
+            try {
+                const rawData = rhData[foundCategory][foundIndicator].valores;
+                if (!rawData) return {
+                    labels: [],
+                    data: []
+                };
+
+                const labels = Object.keys(rawData).sort();
+                const data = labels.map(l => {
+                    let val = rawData[l];
+                    if (typeof val === 'string') {
+                        val = val.replace(/\./g, '').replace(',', '.');
+                        return parseFloat(val);
+                    }
+                    return val;
+                });
+                return {
+                    labels,
+                    data
+                };
+            } catch (e) {
+                console.error("Error parsing data for " + indicatorKeyword, e);
+                return {
+                    labels: [],
+                    data: []
+                };
+            }
+        }
+
+        function createLineChart(canvasId, label, dataObj, color) {
+            const ctx = document.getElementById(canvasId).getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: dataObj.labels,
+                    datasets: [{
+                        label: label,
+                        data: dataObj.data,
+                        borderColor: color,
+                        backgroundColor: color.replace('1)', '0.1)'), // Faint fill
+                        borderWidth: 3,
+                        pointBackgroundColor: '#fff',
+                        pointBorderColor: color,
+                        pointBorderWidth: 2,
+                        pointRadius: 5,
+                        pointHoverRadius: 7,
+                        fill: true,
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                color: '#333',
+                                font: {
+                                    weight: 'bold'
+                                }
+                            }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            backgroundColor: 'rgba(255,255,255,0.95)',
+                            titleColor: '#000',
+                            bodyColor: '#333',
+                            borderColor: '#ddd',
+                            borderWidth: 1
+                        }
+                    },
+                    interaction: {
+                        mode: 'nearest',
+                        axis: 'x',
+                        intersect: false
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            grid: {
+                                color: '#f0f0f0'
+                            },
+                            ticks: {
+                                color: '#666'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#666'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Using keywords mapped to likely CSV indicators
+            const dHead = getChartData("Recursos Humanos", "colaboradores");
+            if (dHead.data.length) createLineChart('chartHeadcount', 'Nº Colaboradores', dHead, 'rgba(46, 125, 50, 1)');
+
+            // Age: "jovens" or "<30"
+            const dAge = getChartData("Demografia", "jovens");
+            if (dAge.data.length) createLineChart('chartAge', '% < 30 Anos', dAge, 'rgba(230, 81, 0, 1)');
+
+            const dGen = getChartData("Demografia", "mulheres");
+            if (dGen.data.length) createLineChart('chartGender', '% Mulheres', dGen, 'rgba(123, 31, 162, 1)');
+
+            const dTurn = getChartData("Recursos Humanos", "rotatividade");
+            if (dTurn.data.length) createLineChart('chartTurnover', 'Turnover %', dTurn, 'rgba(198, 40, 40, 1)');
+
+            const dTrain = getChartData("Desenvolvimento", "formação");
+            if (dTrain.data.length) createLineChart('chartTraining', 'Horas de Formação', dTrain, 'rgba(21, 101, 192, 1)');
+
+            const dSafe = getChartData("Segurança", "frequência");
+            if (dSafe.data.length) createLineChart('chartSafety', 'LTI (Frequência)', dSafe, 'rgba(0, 131, 143, 1)');
+
+            // Baseline calculations for Scorecard
+            const updateBaseline = (id, data, unit = '') => {
+                const el = document.getElementById(id);
+                if (el && data && data.data.length) {
+                    const lastVal = data.data[data.data.length - 1];
+                    el.innerText = lastVal.toLocaleString('pt-PT') + unit;
+                }
+            };
+
+            updateBaseline('val-engagement', getChartData("Clima", "Engagement"), '%');
+            updateBaseline('val-lideranca-fem', getChartData("Demografia", "mulheres"), '%');
+            updateBaseline('val-ttc', { data: [48] }, ' dias'); // Mocked as not in rh_data.js explicitly
+            updateBaseline('val-readiness', getChartData("Organizacional", "Alinhamento"), '%');
+            updateBaseline('val-retencao', { data: [94.2] }, '%'); // Mocked
+            updateBaseline('val-digital', { data: [45] }, '%'); // Mocked
+
+            // Financials
+            const dRev = getChartData("Financeira", "Volume");
+            const dCost = { data: [275] }; // Hypothetical personnel cost in M€
+            if (dRev.data.length) {
+                const perc = (275 / dRev.data[dRev.data.length - 1] * 100).toFixed(1);
+                const cel = document.getElementById('val-custo-pessoal');
+                if (cel) cel.innerText = perc + '%';
+            }
+            updateBaseline('val-hcroi', getChartData("Desenvolvimento", "ROI"), '%');
+
+        });
+
+        // CSV Preview Logic
+        let csvLoaded = false;
+        async function loadCSVPreview() {
+            if (csvLoaded) return;
+            const loading = document.getElementById('csv-loading');
+            const table = document.getElementById('csv-preview-table');
+
+            loading.style.display = 'block';
+            try {
+                const response = await fetch('documentos/hr_indicators_export.csv');
+                const text = await response.text();
+                const rows = text.split('\n').map(row => row.split(';'));
+
+                if (rows.length > 0) {
+                    const headerRow = rows[0];
+                    const headerHtml = headerRow.map(cell => `<th>${cell.replace(/"/g, '')}</th>`).join('');
+                    document.getElementById('csv-header').innerHTML = headerHtml;
+
+                    const bodyHtml = rows.slice(1).filter(row => row.length > 1).map(row => {
+                        return `<tr>${row.map(cell => `<td>${cell.replace(/"/g, '')}</td>`).join('')}</tr>`;
+                    }).join('');
+                    document.getElementById('csv-body').innerHTML = bodyHtml;
+                    csvLoaded = true;
+                }
+            } catch (error) {
+                console.error('Error loading CSV:', error);
+                document.getElementById('csv-preview-container').innerHTML = '<p style="padding:2rem; color:red;">Erro ao carregar o visualizador de CSV. Por favor, descarregue o ficheiro para ver os dados.</p>';
+            } finally {
+                loading.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

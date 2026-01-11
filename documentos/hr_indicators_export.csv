@@ -1,0 +1,196 @@
+﻿Indicador;Descrição;Categoria;Unidade;Fórmula;Ano;Valor
+Índice de Satisfação dos Colaboradores (Engagement);Resultado do inquérito de clima/engagement.;Clima;%;Score médio resultante do inquérito anual de clima;2020;70,0
+Índice de Satisfação dos Colaboradores (Engagement);Resultado do inquérito de clima/engagement.;Clima;%;Score médio resultante do inquérito anual de clima;2021;72,0
+Índice de Satisfação dos Colaboradores (Engagement);Resultado do inquérito de clima/engagement.;Clima;%;Score médio resultante do inquérito anual de clima;2022;75,0
+Índice de Satisfação dos Colaboradores (Engagement);Resultado do inquérito de clima/engagement.;Clima;%;Score médio resultante do inquérito anual de clima;2023;76,5
+Índice de Satisfação dos Colaboradores (Engagement);Resultado do inquérito de clima/engagement.;Clima;%;Score médio resultante do inquérito anual de clima;2024;78,0
+Índice Formal de Reclamações Internas;Total de queixas formalizadas em canais de ética ou jurídico.;Clima;Ocorrências;;2020;5
+Índice Formal de Reclamações Internas;Total de queixas formalizadas em canais de ética ou jurídico.;Clima;Ocorrências;;2021;8
+Índice Formal de Reclamações Internas;Total de queixas formalizadas em canais de ética ou jurídico.;Clima;Ocorrências;;2022;10
+Índice Formal de Reclamações Internas;Total de queixas formalizadas em canais de ética ou jurídico.;Clima;Ocorrências;;2023;15
+Índice Formal de Reclamações Internas;Total de queixas formalizadas em canais de ética ou jurídico.;Clima;Ocorrências;;2024;12
+Competitividade Salarial (SCR);Salary Competitiveness Ratio: Relação do salário médio da empresa face à média de mercado.;Compensação;Rácio;Salário Médio Empresa / Salário Médio Mercado;2020;1,15
+Competitividade Salarial (SCR);Salary Competitiveness Ratio: Relação do salário médio da empresa face à média de mercado.;Compensação;Rácio;Salário Médio Empresa / Salário Médio Mercado;2021;1,18
+Competitividade Salarial (SCR);Salary Competitiveness Ratio: Relação do salário médio da empresa face à média de mercado.;Compensação;Rácio;Salário Médio Empresa / Salário Médio Mercado;2022;1,2
+Competitividade Salarial (SCR);Salary Competitiveness Ratio: Relação do salário médio da empresa face à média de mercado.;Compensação;Rácio;Salário Médio Empresa / Salário Médio Mercado;2023;1,22
+Competitividade Salarial (SCR);Salary Competitiveness Ratio: Relação do salário médio da empresa face à média de mercado.;Compensação;Rácio;Salário Médio Empresa / Salário Médio Mercado;2024;1,25
+Custo Per Capita de Benefícios;Valor médio anual gasto em benefícios por colaborador.;Compensação;EUR;Custo Total Benefícios / Número Colaboradores;2020;1400
+Custo Per Capita de Benefícios;Valor médio anual gasto em benefícios por colaborador.;Compensação;EUR;Custo Total Benefícios / Número Colaboradores;2021;1500
+Custo Per Capita de Benefícios;Valor médio anual gasto em benefícios por colaborador.;Compensação;EUR;Custo Total Benefícios / Número Colaboradores;2022;1650
+Custo Per Capita de Benefícios;Valor médio anual gasto em benefícios por colaborador.;Compensação;EUR;Custo Total Benefícios / Número Colaboradores;2023;1815
+Custo Per Capita de Benefícios;Valor médio anual gasto em benefícios por colaborador.;Compensação;EUR;Custo Total Benefícios / Número Colaboradores;2024;1950
+Salários (Real vs Estimado);Desvio percentual entre remuneração paga (com variáveis) e orçada.;Compensação;%;((Real - Orçado) / Orçado) * 100;2020;0,5
+Salários (Real vs Estimado);Desvio percentual entre remuneração paga (com variáveis) e orçada.;Compensação;%;((Real - Orçado) / Orçado) * 100;2021;5,0
+Salários (Real vs Estimado);Desvio percentual entre remuneração paga (com variáveis) e orçada.;Compensação;%;((Real - Orçado) / Orçado) * 100;2022;25,0
+Salários (Real vs Estimado);Desvio percentual entre remuneração paga (com variáveis) e orçada.;Compensação;%;((Real - Orçado) / Orçado) * 100;2023;12,5
+Salários (Real vs Estimado);Desvio percentual entre remuneração paga (com variáveis) e orçada.;Compensação;%;((Real - Orçado) / Orçado) * 100;2024;15,0
+Índice de Reclamações Internas (Formal);Número de reclamações formais registadas via Canal de Ética ou Jurídico.;Compliance;Ocorrências;;2020;1
+Índice de Reclamações Internas (Formal);Número de reclamações formais registadas via Canal de Ética ou Jurídico.;Compliance;Ocorrências;;2021;5
+Índice de Reclamações Internas (Formal);Número de reclamações formais registadas via Canal de Ética ou Jurídico.;Compliance;Ocorrências;;2022;2
+Índice de Reclamações Internas (Formal);Número de reclamações formais registadas via Canal de Ética ou Jurídico.;Compliance;Ocorrências;;2023;4
+Índice de Reclamações Internas (Formal);Número de reclamações formais registadas via Canal de Ética ou Jurídico.;Compliance;Ocorrências;;2024;3
+Diversidade de Género (% Mulheres);Proporção de mulheres no efetivo total.;Demografia;%;(Mulheres / Total Colaboradores) * 100;2020;16,9
+Diversidade de Género (% Mulheres);Proporção de mulheres no efetivo total.;Demografia;%;(Mulheres / Total Colaboradores) * 100;2021;17,5
+Diversidade de Género (% Mulheres);Proporção de mulheres no efetivo total.;Demografia;%;(Mulheres / Total Colaboradores) * 100;2022;18,2
+Diversidade de Género (% Mulheres);Proporção de mulheres no efetivo total.;Demografia;%;(Mulheres / Total Colaboradores) * 100;2023;18,8
+Diversidade de Género (% Mulheres);Proporção de mulheres no efetivo total.;Demografia;%;(Mulheres / Total Colaboradores) * 100;2024;19,5
+Percentagem de Jovens (<30 anos);Proporção de colaboradores com menos de 30 anos.;Demografia;%;(Colaboradores < 30 anos / Total Colaboradores) * 100;2020;12,0
+Percentagem de Jovens (<30 anos);Proporção de colaboradores com menos de 30 anos.;Demografia;%;(Colaboradores < 30 anos / Total Colaboradores) * 100;2021;13,5
+Percentagem de Jovens (<30 anos);Proporção de colaboradores com menos de 30 anos.;Demografia;%;(Colaboradores < 30 anos / Total Colaboradores) * 100;2022;14,5
+Percentagem de Jovens (<30 anos);Proporção de colaboradores com menos de 30 anos.;Demografia;%;(Colaboradores < 30 anos / Total Colaboradores) * 100;2023;15,8
+Percentagem de Jovens (<30 anos);Proporção de colaboradores com menos de 30 anos.;Demografia;%;(Colaboradores < 30 anos / Total Colaboradores) * 100;2024;16,5
+Média de Horas de Formação;Número médio de horas de formação por colaborador/ano.;Desenvolvimento;Horas;Total Horas Formação / Número Médio Colaboradores;2020;18,0
+Média de Horas de Formação;Número médio de horas de formação por colaborador/ano.;Desenvolvimento;Horas;Total Horas Formação / Número Médio Colaboradores;2021;30,0
+Média de Horas de Formação;Número médio de horas de formação por colaborador/ano.;Desenvolvimento;Horas;Total Horas Formação / Número Médio Colaboradores;2022;38,0
+Média de Horas de Formação;Número médio de horas de formação por colaborador/ano.;Desenvolvimento;Horas;Total Horas Formação / Número Médio Colaboradores;2023;42,5
+Média de Horas de Formação;Número médio de horas de formação por colaborador/ano.;Desenvolvimento;Horas;Total Horas Formação / Número Médio Colaboradores;2024;45,0
+ROI da Formação;Retorno financeiro estimado por euro investido em formação.;Desenvolvimento;%;((Benefício - Custo) / Custo) * 100;2020;80
+ROI da Formação;Retorno financeiro estimado por euro investido em formação.;Desenvolvimento;%;((Benefício - Custo) / Custo) * 100;2021;110
+ROI da Formação;Retorno financeiro estimado por euro investido em formação.;Desenvolvimento;%;((Benefício - Custo) / Custo) * 100;2022;130
+ROI da Formação;Retorno financeiro estimado por euro investido em formação.;Desenvolvimento;%;((Benefício - Custo) / Custo) * 100;2023;140
+ROI da Formação;Retorno financeiro estimado por euro investido em formação.;Desenvolvimento;%;((Benefício - Custo) / Custo) * 100;2024;150
+Satisfação Média com Formação;Avaliação média dada pelos formandos (escala 1-5).;Desenvolvimento;Escala 1-5;Média da avaliação de reação pós-formação (1-5);2020;4,0
+Satisfação Média com Formação;Avaliação média dada pelos formandos (escala 1-5).;Desenvolvimento;Escala 1-5;Média da avaliação de reação pós-formação (1-5);2021;4,2
+Satisfação Média com Formação;Avaliação média dada pelos formandos (escala 1-5).;Desenvolvimento;Escala 1-5;Média da avaliação de reação pós-formação (1-5);2022;4,4
+Satisfação Média com Formação;Avaliação média dada pelos formandos (escala 1-5).;Desenvolvimento;Escala 1-5;Média da avaliação de reação pós-formação (1-5);2023;4,5
+Satisfação Média com Formação;Avaliação média dada pelos formandos (escala 1-5).;Desenvolvimento;Escala 1-5;Média da avaliação de reação pós-formação (1-5);2024;4,6
+CAPEX;Investimento em ativos fixos tangíveis e intangíveis.;Financeira;M€;Total de investimento em ativos fixos tangíveis e intangíveis;2020;80,6
+CAPEX;Investimento em ativos fixos tangíveis e intangíveis.;Financeira;M€;Total de investimento em ativos fixos tangíveis e intangíveis;2021;80,1
+CAPEX;Investimento em ativos fixos tangíveis e intangíveis.;Financeira;M€;Total de investimento em ativos fixos tangíveis e intangíveis;2022;112,5
+CAPEX;Investimento em ativos fixos tangíveis e intangíveis.;Financeira;M€;Total de investimento em ativos fixos tangíveis e intangíveis;2023;186,5
+CAPEX;Investimento em ativos fixos tangíveis e intangíveis.;Financeira;M€;Total de investimento em ativos fixos tangíveis e intangíveis;2024;240,6
+Dívida Líquida;Dívida financeira remunerada líquida de disponibilidades.;Financeira;M€;Dívida Remunerada - Disponibilidades e Aplicações Financeiras;2020;680
+Dívida Líquida;Dívida financeira remunerada líquida de disponibilidades.;Financeira;M€;Dívida Remunerada - Disponibilidades e Aplicações Financeiras;2021;595
+Dívida Líquida;Dívida financeira remunerada líquida de disponibilidades.;Financeira;M€;Dívida Remunerada - Disponibilidades e Aplicações Financeiras;2022;382
+Dívida Líquida;Dívida financeira remunerada líquida de disponibilidades.;Financeira;M€;Dívida Remunerada - Disponibilidades e Aplicações Financeiras;2023;490
+Dívida Líquida;Dívida financeira remunerada líquida de disponibilidades.;Financeira;M€;Dívida Remunerada - Disponibilidades e Aplicações Financeiras;2024;617
+Volume de Negócios;Total das vendas e prestações de serviços.;Financeira;M€;Total das vendas de produtos e prestações de serviços;2020;1385
+Volume de Negócios;Total das vendas e prestações de serviços.;Financeira;M€;Total das vendas de produtos e prestações de serviços;2021;1596
+Volume de Negócios;Total das vendas e prestações de serviços.;Financeira;M€;Total das vendas de produtos e prestações de serviços;2022;2465
+Volume de Negócios;Total das vendas e prestações de serviços.;Financeira;M€;Total das vendas de produtos e prestações de serviços;2023;1953
+Volume de Negócios;Total das vendas e prestações de serviços.;Financeira;M€;Total das vendas de produtos e prestações de serviços;2024;2088
+Cash Flow Operacional;Caixa gerado pelas operações.;Financeiro;Milhões EUR;Fluxo de caixa gerado pelas atividades operacionais;2020;357
+Cash Flow Operacional;Caixa gerado pelas operações.;Financeiro;Milhões EUR;Fluxo de caixa gerado pelas atividades operacionais;2021;354
+Cash Flow Operacional;Caixa gerado pelas operações.;Financeiro;Milhões EUR;Fluxo de caixa gerado pelas atividades operacionais;2022;626
+Cash Flow Operacional;Caixa gerado pelas operações.;Financeiro;Milhões EUR;Fluxo de caixa gerado pelas atividades operacionais;2023;369
+Cash Flow Operacional;Caixa gerado pelas operações.;Financeiro;Milhões EUR;Fluxo de caixa gerado pelas atividades operacionais;2024;411
+EBITDA;Lucros antes de juros, impostos, depreciação e amortização.;Financeiro;Milhões EUR;Earnings Before Interest, Taxes, Depreciation and Amortization;2020;286
+EBITDA;Lucros antes de juros, impostos, depreciação e amortização.;Financeiro;Milhões EUR;Earnings Before Interest, Taxes, Depreciation and Amortization;2021;355
+EBITDA;Lucros antes de juros, impostos, depreciação e amortização.;Financeiro;Milhões EUR;Earnings Before Interest, Taxes, Depreciation and Amortization;2022;746
+EBITDA;Lucros antes de juros, impostos, depreciação e amortização.;Financeiro;Milhões EUR;Earnings Before Interest, Taxes, Depreciation and Amortization;2023;502
+EBITDA;Lucros antes de juros, impostos, depreciação e amortização.;Financeiro;Milhões EUR;Earnings Before Interest, Taxes, Depreciation and Amortization;2024;547
+Resultado Líquido (Lucros);Lucro líquido do exercício.;Financeiro;Milhões EUR;Resultado Líquido do exercício (Lucro/Prejuízo);2020;109
+Resultado Líquido (Lucros);Lucro líquido do exercício.;Financeiro;Milhões EUR;Resultado Líquido do exercício (Lucro/Prejuízo);2021;171
+Resultado Líquido (Lucros);Lucro líquido do exercício.;Financeiro;Milhões EUR;Resultado Líquido do exercício (Lucro/Prejuízo);2022;393
+Resultado Líquido (Lucros);Lucro líquido do exercício.;Financeiro;Milhões EUR;Resultado Líquido do exercício (Lucro/Prejuízo);2023;275
+Resultado Líquido (Lucros);Lucro líquido do exercício.;Financeiro;Milhões EUR;Resultado Líquido do exercício (Lucro/Prejuízo);2024;287
+Percentagem de Receita de Novos Produtos;Receita vinda de produtos lançados nos últimos 5 anos (ex: Tissue, Packaging).;Inovação;%;(Receita de Produtos < 5 anos / Receita Total) * 100;2020;6,0
+Percentagem de Receita de Novos Produtos;Receita vinda de produtos lançados nos últimos 5 anos (ex: Tissue, Packaging).;Inovação;%;(Receita de Produtos < 5 anos / Receita Total) * 100;2021;7,5
+Percentagem de Receita de Novos Produtos;Receita vinda de produtos lançados nos últimos 5 anos (ex: Tissue, Packaging).;Inovação;%;(Receita de Produtos < 5 anos / Receita Total) * 100;2022;9,0
+Percentagem de Receita de Novos Produtos;Receita vinda de produtos lançados nos últimos 5 anos (ex: Tissue, Packaging).;Inovação;%;(Receita de Produtos < 5 anos / Receita Total) * 100;2023;10,5
+Percentagem de Receita de Novos Produtos;Receita vinda de produtos lançados nos últimos 5 anos (ex: Tissue, Packaging).;Inovação;%;(Receita de Produtos < 5 anos / Receita Total) * 100;2024;12,0
+Desempenho - Tempo (OTIF);On-Time In-Full: Percentagem de encomendas entregues no prazo e completas.;Logística/Cliente;%;;2020;88,0
+Desempenho - Tempo (OTIF);On-Time In-Full: Percentagem de encomendas entregues no prazo e completas.;Logística/Cliente;%;;2021;86,0
+Desempenho - Tempo (OTIF);On-Time In-Full: Percentagem de encomendas entregues no prazo e completas.;Logística/Cliente;%;;2022;89,5
+Desempenho - Tempo (OTIF);On-Time In-Full: Percentagem de encomendas entregues no prazo e completas.;Logística/Cliente;%;;2023;94,0
+Desempenho - Tempo (OTIF);On-Time In-Full: Percentagem de encomendas entregues no prazo e completas.;Logística/Cliente;%;;2024;95,5
+Market Share (UWF Europa);Quota de mercado estimada em papel de escritório (UWF) na Europa.;Mercado;%;;2020;17,5
+Market Share (UWF Europa);Quota de mercado estimada em papel de escritório (UWF) na Europa.;Mercado;%;;2021;18,0
+Market Share (UWF Europa);Quota de mercado estimada em papel de escritório (UWF) na Europa.;Mercado;%;;2022;18,5
+Market Share (UWF Europa);Quota de mercado estimada em papel de escritório (UWF) na Europa.;Mercado;%;;2023;19,0
+Market Share (UWF Europa);Quota de mercado estimada em papel de escritório (UWF) na Europa.;Mercado;%;;2024;19,5
+Índice de Alinhamento Estratégico (Fit Cultural);Grau de adequação de competências e valores dos colaboradores à cultura (Aval. 360/Survey).;Organizacional;%;Média da avaliação 360º na competência de alinhamento cultural;2020;76,0
+Índice de Alinhamento Estratégico (Fit Cultural);Grau de adequação de competências e valores dos colaboradores à cultura (Aval. 360/Survey).;Organizacional;%;Média da avaliação 360º na competência de alinhamento cultural;2021;78,0
+Índice de Alinhamento Estratégico (Fit Cultural);Grau de adequação de competências e valores dos colaboradores à cultura (Aval. 360/Survey).;Organizacional;%;Média da avaliação 360º na competência de alinhamento cultural;2022;80,0
+Índice de Alinhamento Estratégico (Fit Cultural);Grau de adequação de competências e valores dos colaboradores à cultura (Aval. 360/Survey).;Organizacional;%;Média da avaliação 360º na competência de alinhamento cultural;2023;82,5
+Índice de Alinhamento Estratégico (Fit Cultural);Grau de adequação de competências e valores dos colaboradores à cultura (Aval. 360/Survey).;Organizacional;%;Média da avaliação 360º na competência de alinhamento cultural;2024;85,0
+Produtividade (Receita por Colaborador);Receita total dividida pelo número médio de colaboradores.;Performance;EUR;Receita Total / FTEs (Full Time Equivalents);2020;420000
+Produtividade (Receita por Colaborador);Receita total dividida pelo número médio de colaboradores.;Performance;EUR;Receita Total / FTEs (Full Time Equivalents);2021;500000
+Produtividade (Receita por Colaborador);Receita total dividida pelo número médio de colaboradores.;Performance;EUR;Receita Total / FTEs (Full Time Equivalents);2022;755000
+Produtividade (Receita por Colaborador);Receita total dividida pelo número médio de colaboradores.;Performance;EUR;Receita Total / FTEs (Full Time Equivalents);2023;589000
+Produtividade (Receita por Colaborador);Receita total dividida pelo número médio de colaboradores.;Performance;EUR;Receita Total / FTEs (Full Time Equivalents);2024;610000
+Disponibilidade Operacional;Tempo que as fábricas estiveram a produzir vs tempo planeado.;Produção;%;Tempo Real de Produção / Tempo Planeado de Produção;2020;90,0
+Disponibilidade Operacional;Tempo que as fábricas estiveram a produzir vs tempo planeado.;Produção;%;Tempo Real de Produção / Tempo Planeado de Produção;2021;92,0
+Disponibilidade Operacional;Tempo que as fábricas estiveram a produzir vs tempo planeado.;Produção;%;Tempo Real de Produção / Tempo Planeado de Produção;2022;95,0
+Disponibilidade Operacional;Tempo que as fábricas estiveram a produzir vs tempo planeado.;Produção;%;Tempo Real de Produção / Tempo Planeado de Produção;2023;93,5
+Disponibilidade Operacional;Tempo que as fábricas estiveram a produzir vs tempo planeado.;Produção;%;Tempo Real de Produção / Tempo Planeado de Produção;2024;94,0
+Índice de Qualidade (Produto Final);Percentagem de produto conforme normas de qualidade (First Time Right).;Produção;%;(Produtos Conformes / Total Produzido) * 100;2020;97,5
+Índice de Qualidade (Produto Final);Percentagem de produto conforme normas de qualidade (First Time Right).;Produção;%;(Produtos Conformes / Total Produzido) * 100;2021;97,8
+Índice de Qualidade (Produto Final);Percentagem de produto conforme normas de qualidade (First Time Right).;Produção;%;(Produtos Conformes / Total Produzido) * 100;2022;98,0
+Índice de Qualidade (Produto Final);Percentagem de produto conforme normas de qualidade (First Time Right).;Produção;%;(Produtos Conformes / Total Produzido) * 100;2023;98,2
+Índice de Qualidade (Produto Final);Percentagem de produto conforme normas de qualidade (First Time Right).;Produção;%;(Produtos Conformes / Total Produzido) * 100;2024;98,5
+Desempenho - Custo (Desvio Orçamental Operacional);Desvio percentual do custo de produção face ao orçamentado.;Produção/Financeiro;%;;2020;3,0
+Desempenho - Custo (Desvio Orçamental Operacional);Desvio percentual do custo de produção face ao orçamentado.;Produção/Financeiro;%;;2021;5,5
+Desempenho - Custo (Desvio Orçamental Operacional);Desvio percentual do custo de produção face ao orçamentado.;Produção/Financeiro;%;;2022;12,0
+Desempenho - Custo (Desvio Orçamental Operacional);Desvio percentual do custo de produção face ao orçamentado.;Produção/Financeiro;%;;2023;2,5
+Desempenho - Custo (Desvio Orçamental Operacional);Desvio percentual do custo de produção face ao orçamentado.;Produção/Financeiro;%;;2024;1,2
+Relação Horas Extra / Horas Trabalhadas;Percentagem de horas extra sobre o total de horas trabalhadas.;Produtividade;%;(Horas Extra / Total Horas Trabalhadas) * 100;2020;3,5
+Relação Horas Extra / Horas Trabalhadas;Percentagem de horas extra sobre o total de horas trabalhadas.;Produtividade;%;(Horas Extra / Total Horas Trabalhadas) * 100;2021;6,0
+Relação Horas Extra / Horas Trabalhadas;Percentagem de horas extra sobre o total de horas trabalhadas.;Produtividade;%;(Horas Extra / Total Horas Trabalhadas) * 100;2022;7,5
+Relação Horas Extra / Horas Trabalhadas;Percentagem de horas extra sobre o total de horas trabalhadas.;Produtividade;%;(Horas Extra / Total Horas Trabalhadas) * 100;2023;5,2
+Relação Horas Extra / Horas Trabalhadas;Percentagem de horas extra sobre o total de horas trabalhadas.;Produtividade;%;(Horas Extra / Total Horas Trabalhadas) * 100;2024;4,8
+Índice de Reclamações de Clientes;Número de reclamações por milhar de toneladas vendidas.;Qualidade;Ex: #/kTon;Reclamações de Clientes / Milhares de Toneladas Vendidas;2020;3,0
+Índice de Reclamações de Clientes;Número de reclamações por milhar de toneladas vendidas.;Qualidade;Ex: #/kTon;Reclamações de Clientes / Milhares de Toneladas Vendidas;2021;2,8
+Índice de Reclamações de Clientes;Número de reclamações por milhar de toneladas vendidas.;Qualidade;Ex: #/kTon;Reclamações de Clientes / Milhares de Toneladas Vendidas;2022;2,5
+Índice de Reclamações de Clientes;Número de reclamações por milhar de toneladas vendidas.;Qualidade;Ex: #/kTon;Reclamações de Clientes / Milhares de Toneladas Vendidas;2023;2,3
+Índice de Reclamações de Clientes;Número de reclamações por milhar de toneladas vendidas.;Qualidade;Ex: #/kTon;Reclamações de Clientes / Milhares de Toneladas Vendidas;2024;2,1
+Índice de Qualidade de Contratação;Pontuação média da performance dos novos contratados (1 a 5).;Recrutamento;Escala 1-5;Média da avaliação de desempenho dos novos contratados (1-5);2020;3,8
+Índice de Qualidade de Contratação;Pontuação média da performance dos novos contratados (1 a 5).;Recrutamento;Escala 1-5;Média da avaliação de desempenho dos novos contratados (1-5);2021;3,9
+Índice de Qualidade de Contratação;Pontuação média da performance dos novos contratados (1 a 5).;Recrutamento;Escala 1-5;Média da avaliação de desempenho dos novos contratados (1-5);2022;4,0
+Índice de Qualidade de Contratação;Pontuação média da performance dos novos contratados (1 a 5).;Recrutamento;Escala 1-5;Média da avaliação de desempenho dos novos contratados (1-5);2023;4,1
+Índice de Qualidade de Contratação;Pontuação média da performance dos novos contratados (1 a 5).;Recrutamento;Escala 1-5;Média da avaliação de desempenho dos novos contratados (1-5);2024;4,2
+Score Médio de Adequação (Ranking Candidatos);Pontuação média (0-100) de adequação perfil-função dos finalistas (Match Score).;Recrutamento;Score (0-100);Pontuação média de match (0-100) dos candidatos finalistas;2020;72,0
+Score Médio de Adequação (Ranking Candidatos);Pontuação média (0-100) de adequação perfil-função dos finalistas (Match Score).;Recrutamento;Score (0-100);Pontuação média de match (0-100) dos candidatos finalistas;2021;75,0
+Score Médio de Adequação (Ranking Candidatos);Pontuação média (0-100) de adequação perfil-função dos finalistas (Match Score).;Recrutamento;Score (0-100);Pontuação média de match (0-100) dos candidatos finalistas;2022;81,0
+Score Médio de Adequação (Ranking Candidatos);Pontuação média (0-100) de adequação perfil-função dos finalistas (Match Score).;Recrutamento;Score (0-100);Pontuação média de match (0-100) dos candidatos finalistas;2023;85,0
+Score Médio de Adequação (Ranking Candidatos);Pontuação média (0-100) de adequação perfil-função dos finalistas (Match Score).;Recrutamento;Score (0-100);Pontuação média de match (0-100) dos candidatos finalistas;2024;88,0
+Taxa de Vagas no Prazo;Percentagem de vagas preenchidas dentro do SLA definido.;Recrutamento;%;(Vagas fechadas no prazo / Total Vagas) * 100;2020;70,0
+Taxa de Vagas no Prazo;Percentagem de vagas preenchidas dentro do SLA definido.;Recrutamento;%;(Vagas fechadas no prazo / Total Vagas) * 100;2021;75,0
+Taxa de Vagas no Prazo;Percentagem de vagas preenchidas dentro do SLA definido.;Recrutamento;%;(Vagas fechadas no prazo / Total Vagas) * 100;2022;78,0
+Taxa de Vagas no Prazo;Percentagem de vagas preenchidas dentro do SLA definido.;Recrutamento;%;(Vagas fechadas no prazo / Total Vagas) * 100;2023;82,0
+Taxa de Vagas no Prazo;Percentagem de vagas preenchidas dentro do SLA definido.;Recrutamento;%;(Vagas fechadas no prazo / Total Vagas) * 100;2024;85,0
+Fator Bradford;Índice ponderado de impacto do absentismo (S² x D).;Recursos Humanos;Pontos;(Frequência Ausências)² * Dias Totais Ausência;2020;280
+Fator Bradford;Índice ponderado de impacto do absentismo (S² x D).;Recursos Humanos;Pontos;(Frequência Ausências)² * Dias Totais Ausência;2021;250
+Fator Bradford;Índice ponderado de impacto do absentismo (S² x D).;Recursos Humanos;Pontos;(Frequência Ausências)² * Dias Totais Ausência;2022;180
+Fator Bradford;Índice ponderado de impacto do absentismo (S² x D).;Recursos Humanos;Pontos;(Frequência Ausências)² * Dias Totais Ausência;2023;135
+Fator Bradford;Índice ponderado de impacto do absentismo (S² x D).;Recursos Humanos;Pontos;(Frequência Ausências)² * Dias Totais Ausência;2024;120
+Índice de Pontualidade;Percentagem de colaboradores a iniciar turno no horário previsto.;Recursos Humanos;%;;2020;94,0
+Índice de Pontualidade;Percentagem de colaboradores a iniciar turno no horário previsto.;Recursos Humanos;%;;2021;95,5
+Índice de Pontualidade;Percentagem de colaboradores a iniciar turno no horário previsto.;Recursos Humanos;%;;2022;95,8
+Índice de Pontualidade;Percentagem de colaboradores a iniciar turno no horário previsto.;Recursos Humanos;%;;2023;96,2
+Índice de Pontualidade;Percentagem de colaboradores a iniciar turno no horário previsto.;Recursos Humanos;%;;2024;96,5
+Número de colaboradores/empregados;Número total de colaboradores da The Navigator Company no final do ano.;Recursos Humanos;Pessoas;Número total de colaboradores com contrato ativo no final do ano;2020;3232
+Número de colaboradores/empregados;Número total de colaboradores da The Navigator Company no final do ano.;Recursos Humanos;Pessoas;Número total de colaboradores com contrato ativo no final do ano;2021;3150
+Número de colaboradores/empregados;Número total de colaboradores da The Navigator Company no final do ano.;Recursos Humanos;Pessoas;Número total de colaboradores com contrato ativo no final do ano;2022;3246
+Número de colaboradores/empregados;Número total de colaboradores da The Navigator Company no final do ano.;Recursos Humanos;Pessoas;Número total de colaboradores com contrato ativo no final do ano;2023;3317
+Número de colaboradores/empregados;Número total de colaboradores da The Navigator Company no final do ano.;Recursos Humanos;Pessoas;Número total de colaboradores com contrato ativo no final do ano;2024;3717
+Taxa de Absentismo;Percentagem de faltas em relação às horas potenciais de trabalho.;Recursos Humanos;%;(Horas Ausência / Potencial Horas Trabalho) * 100;2020;5,1
+Taxa de Absentismo;Percentagem de faltas em relação às horas potenciais de trabalho.;Recursos Humanos;%;(Horas Ausência / Potencial Horas Trabalho) * 100;2021;4,8
+Taxa de Absentismo;Percentagem de faltas em relação às horas potenciais de trabalho.;Recursos Humanos;%;(Horas Ausência / Potencial Horas Trabalho) * 100;2022;4,2
+Taxa de Absentismo;Percentagem de faltas em relação às horas potenciais de trabalho.;Recursos Humanos;%;(Horas Ausência / Potencial Horas Trabalho) * 100;2023;3,9
+Taxa de Absentismo;Percentagem de faltas em relação às horas potenciais de trabalho.;Recursos Humanos;%;(Horas Ausência / Potencial Horas Trabalho) * 100;2024;3,8
+Taxa de Rotatividade Global (Turnover);Percentagem de trabalhadores que saíram da organização em relação ao efetivo médio.;Recursos Humanos;%;(Saídas Totais / Efetivo Médio) * 100;2020;3,2
+Taxa de Rotatividade Global (Turnover);Percentagem de trabalhadores que saíram da organização em relação ao efetivo médio.;Recursos Humanos;%;(Saídas Totais / Efetivo Médio) * 100;2021;4,9
+Taxa de Rotatividade Global (Turnover);Percentagem de trabalhadores que saíram da organização em relação ao efetivo médio.;Recursos Humanos;%;(Saídas Totais / Efetivo Médio) * 100;2022;6,1
+Taxa de Rotatividade Global (Turnover);Percentagem de trabalhadores que saíram da organização em relação ao efetivo médio.;Recursos Humanos;%;(Saídas Totais / Efetivo Médio) * 100;2023;5,5
+Taxa de Rotatividade Global (Turnover);Percentagem de trabalhadores que saíram da organização em relação ao efetivo médio.;Recursos Humanos;%;(Saídas Totais / Efetivo Médio) * 100;2024;5,8
+Taxa de Saída Voluntária;Percentagem de saídas por iniciativa do colaborador.;Recursos Humanos;%;(Saídas Voluntárias / Efetivo Médio) * 100;2020;1,5
+Taxa de Saída Voluntária;Percentagem de saídas por iniciativa do colaborador.;Recursos Humanos;%;(Saídas Voluntárias / Efetivo Médio) * 100;2021;2,5
+Taxa de Saída Voluntária;Percentagem de saídas por iniciativa do colaborador.;Recursos Humanos;%;(Saídas Voluntárias / Efetivo Médio) * 100;2022;3,5
+Taxa de Saída Voluntária;Percentagem de saídas por iniciativa do colaborador.;Recursos Humanos;%;(Saídas Voluntárias / Efetivo Médio) * 100;2023;2,9
+Taxa de Saída Voluntária;Percentagem de saídas por iniciativa do colaborador.;Recursos Humanos;%;(Saídas Voluntárias / Efetivo Médio) * 100;2024;3,1
+Tempo Médio de Empresa (Tenure);Média de anos de antiguidade dos colaboradores na empresa.;Recursos Humanos;Anos;Tempo médio (anos) de permanência dos colaboradores atuais;2020;15,3
+Tempo Médio de Empresa (Tenure);Média de anos de antiguidade dos colaboradores na empresa.;Recursos Humanos;Anos;Tempo médio (anos) de permanência dos colaboradores atuais;2021;15,1
+Tempo Médio de Empresa (Tenure);Média de anos de antiguidade dos colaboradores na empresa.;Recursos Humanos;Anos;Tempo médio (anos) de permanência dos colaboradores atuais;2022;14,8
+Tempo Médio de Empresa (Tenure);Média de anos de antiguidade dos colaboradores na empresa.;Recursos Humanos;Anos;Tempo médio (anos) de permanência dos colaboradores atuais;2023;14,5
+Tempo Médio de Empresa (Tenure);Média de anos de antiguidade dos colaboradores na empresa.;Recursos Humanos;Anos;Tempo médio (anos) de permanência dos colaboradores atuais;2024;14,2
+Índice de Frequência de Acidentes (LTI);Número de acidentes com baixa por milhão de horas trabalhadas.;Segurança;Índice;(Acidentes com Baixa / Horas Trabalhadas) * 1.000.000;2020;4,5
+Índice de Frequência de Acidentes (LTI);Número de acidentes com baixa por milhão de horas trabalhadas.;Segurança;Índice;(Acidentes com Baixa / Horas Trabalhadas) * 1.000.000;2021;5,2
+Índice de Frequência de Acidentes (LTI);Número de acidentes com baixa por milhão de horas trabalhadas.;Segurança;Índice;(Acidentes com Baixa / Horas Trabalhadas) * 1.000.000;2022;4,8
+Índice de Frequência de Acidentes (LTI);Número de acidentes com baixa por milhão de horas trabalhadas.;Segurança;Índice;(Acidentes com Baixa / Horas Trabalhadas) * 1.000.000;2023;4,1
+Índice de Frequência de Acidentes (LTI);Número de acidentes com baixa por milhão de horas trabalhadas.;Segurança;Índice;(Acidentes com Baixa / Horas Trabalhadas) * 1.000.000;2024;3,5
+Número de Acidentes de Trabalho;Total de acidentes de trabalho com baixa registados no ano.;Segurança;Acidentes;;2020;21
+Número de Acidentes de Trabalho;Total de acidentes de trabalho com baixa registados no ano.;Segurança;Acidentes;;2021;28
+Número de Acidentes de Trabalho;Total de acidentes de trabalho com baixa registados no ano.;Segurança;Acidentes;;2022;25
+Número de Acidentes de Trabalho;Total de acidentes de trabalho com baixa registados no ano.;Segurança;Acidentes;;2023;22
+Número de Acidentes de Trabalho;Total de acidentes de trabalho com baixa registados no ano.;Segurança;Acidentes;;2024;18
