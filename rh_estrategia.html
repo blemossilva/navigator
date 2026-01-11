@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/theme.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
     <style>
         /* RH Specific Styles - High Contrast "Paper" Theme */
         body {
@@ -848,6 +849,7 @@
         Chart.defaults.borderColor = '#eee'; // Grid lines
         Chart.defaults.font.family = "'Source Sans Pro', sans-serif";
         Chart.defaults.font.weight = '600';
+        Chart.register(ChartDataLabels); // Register plugin globally
 
         // Robust Data Finder
         function getChartData(preferredCategory, indicatorKeyword) {
@@ -966,6 +968,19 @@
                             bodyColor: '#333',
                             borderColor: '#ddd',
                             borderWidth: 1
+                        },
+                        datalabels: {
+                            align: 'top',
+                            anchor: 'end',
+                            offset: 4,
+                            color: color,
+                            font: {
+                                weight: 'bold',
+                                size: 11
+                            },
+                            formatter: function (value) {
+                                return value.toLocaleString('pt-PT');
+                            }
                         }
                     },
                     interaction: {
